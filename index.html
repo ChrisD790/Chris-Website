@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris Dietrich — Mechatronics Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo"></a>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"      data-nav>About</a></li>
+      <li><a href="#skills"     data-nav>Skills</a></li>
+      <li><a href="#projects"   data-nav>Projects</a></li>
+      <li><a href="#experience" data-nav>Experience</a></li>
+      <li><a href="#awards"     data-nav>Awards</a></li>
+      <li><a href="#contact"    data-nav>Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-tag">Mechatronics Engineering - University of Waterloo</p>
+      <h1 class="hero-name">Chris <span>Dietrich</span></h1>
+      <p class="hero-role"><span id="heroRole"></span><span class="cursor">|</span></p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact"  class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <span class="scroll-hint-line"></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="label">About Me</p>
+      <div class="about-grid reveal">
+        <div class="about-photo">
+        <img src="photos/pfp.jpg" alt="Chris Dietrich"> 
+        </div>
+        <div class="about-text">
+          <h2> <em>Engineer, builder, problem solver.</em></h2>
+          <p>I'm a Mechatronics Engineering student at the University of Waterloo with a passion for building things that work; from airport baggage simulation tooling at Brock Solutions to autonomous robots, voice assistants, and Unity games.</p>
+          <p>I graduated from AFNORTH International High School as Valedictorian with a 98.7% average, won a $15,000 FIRST Tech Scholarship, and was recognised by NATO's base commander for leadership and character. I bring that same drive to every project: clean code, real-world impact, and innovative thinking.</p>
+          <p>Currently exploring computer vision with the Waterloo Aerial Robotics Group (WARG), learning ROS and OpenCV, and always searching for a new challenge.</p>
+          <br>
+          <a href="Refined_Resume_2026-05.pdf" target="_blank" class="btn btn-ghost btn-sm">Download CV →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <p class="label reveal">Skills &amp; Tools</p>
+      <div class="filter-bar reveal" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="languages">Languages</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+        <button class="filter-btn" data-filter="frameworks">Frameworks</button>
+      </div>
+      <div class="skills-grid" id="skillsGrid">
+
+        <div class="skill-card reveal" data-category="languages">
+          <div class="skill-icon">⬡</div>
+          <h3>Systems Languages</h3>
+          <p>Object-oriented and low-level development for robotics, simulations, and performance-critical applications.</p>
+          <div class="skill-tags">
+            <span class="tag accent">C++</span>
+            <span class="tag accent">C#</span>
+            <span class="tag">Java</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-category="languages">
+          <div class="skill-icon">◈</div>
+          <h3>Scripting &amp; Data</h3>
+          <p>Rapid prototyping, automation scripts, and data processing for real-world engineering workflows.</p>
+          <div class="skill-tags">
+            <span class="tag accent">Python</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-category="tools">
+          <div class="skill-icon">⬦</div>
+          <h3>Engineering Tools</h3>
+          <p>CAD modelling, simulation environments, and version control for hardware/software co-design.</p>
+          <div class="skill-tags">
+            <span class="tag accent">SolidWorks</span>
+            <span class="tag">AutoCAD</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Xcelgo Experior</span>
+            <span class="tag">Excel</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-category="frameworks">
+          <div class="skill-icon">◇</div>
+          <h3>Frameworks &amp; Tech</h3>
+          <p>Game engines, APIs, and robotics frameworks — actively learning computer vision and autonomous systems.</p>
+          <div class="skill-tags">
+            <span class="tag accent">Unity</span>
+            <span class="tag">REST API</span>
+            <span class="tag">ROS</span>
+            <span class="tag">OpenCV</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="label reveal">Selected Work</p>
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <img src="photos/Brock.jpg" alt="Experior Remote Tool">
+            <div class="project-thumb-frame">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Add screenshot</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-year">2026 · Brock Solutions</p>
+            <h3>Experior Remote Interaction Tool</h3>
+            <p>C# tool enabling multiple engineers to remotely access shared Xcelgo Experior airport baggage simulations over REST API, reducing licensing costs and enabling collaborative workflows.</p>
+            <div class="skill-tags mt-sm">
+              <span class="tag">C#</span>
+              <span class="tag">REST API</span>
+              <span class="tag">WinForms</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <img src="photos/Brock.jpg" alt="Airport Data Synthesizer">
+            <div class="project-thumb-frame">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Add screenshot</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-year">2026 · Brock Solutions</p>
+            <h3>Airport Data Synthesizer</h3>
+            <p>Slashed simulation data preparation from 6 hours to 5 minutes by querying airport operational databases via Microsoft SQL Client and synthesising real-time data into XML/CSV inputs.</p>
+            <div class="skill-tags mt-sm">
+              <span class="tag">C#</span>
+              <span class="tag">SQL</span>
+              <span class="tag">XML</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <img src="photos/GooseHunt.png" alt="Goose Hunt">
+            <div class="project-thumb-frame">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Add screenshot</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-year">2026 · Eng-Hacks</p>
+            <h3>Goose Hunt</h3>
+            <p>Real-time multiplayer campus game built at a hackathon. Players join over a shared network for cross-device gameplay with live location tracking, dynamic shrinking zones, and role-based win conditions.</p>
+            <div class="skill-tags mt-sm">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Leaflet</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Git</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ChrisD790/GooseHunt" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <img src="photos/Python.jpg" alt="Voice Assistant">
+            <div class="project-thumb-frame">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Add screenshot</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-year">2025 – Present</p>
+            <h3>Python Voice Assistant</h3>
+            <p>Working Speech-to-Text and Text-to-Speech system with a custom wake word. Currently building intent recognition for arithmetic, computer functions, and search queries.</p>
+            <div class="skill-tags mt-sm">
+              <span class="tag">Python</span>
+              <span class="tag">STT / TTS</span>
+              <span class="tag">NLP</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <img src="photos/TicTacToe.jpg" alt="Tic Tac Toe Robot"> 
+            <div class="project-thumb-frame">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Add screenshot</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-year">2025 · MTE100 Class Project</p>
+            <h3>Autonomous Tic Tac Toe Robot</h3>
+            <p>Fully autonomous robot that plays Tic Tac Toe against a human using VEX IQ as the control hub. Team development coordinated via a shared Git repository.</p>
+            <div class="skill-tags mt-sm">
+              <span class="tag">VEX IQ</span>
+              <span class="tag">C++</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <img src="photos/Unity.png" alt="Unity Games">
+            <div class="project-thumb-frame">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Add screenshot</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-year">2024 – 2025</p>
+            <h3>Unity Games — FBLA 1st Place</h3>
+            <p>Two Unity games that took 1st place at the FBLA provincial competition. Co-developed using a shared Git repository for active version management and collaboration.</p>
+            <div class="skill-tags mt-sm">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Git</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ChrisD790/FBLA-game" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <img src="photos/Python.jpg" alt="Python Utilities">
+            <div class="project-thumb-frame">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Add screenshot</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-year">2023 – Present</p>
+            <h3>Python Utilities &amp; Scripts</h3>
+            <p>Collection of personal Python projects: a trombone flashcard app, a quadratic solver (factoring, vertex form, roots), and a game automation script for autonomous resource generation.</p>
+            <div class="skill-tags mt-sm">
+              <span class="tag">Python</span>
+              <span class="tag">Automation</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container container-narrow">
+      <p class="label reveal">Experience &amp; Education</p>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <p class="timeline-meta">Jan – Apr 2026</p>
+          <h3>Software Engineer</h3>
+          <p class="timeline-company">Brock Solutions</p>
+          <p>Built C# tooling for airport baggage handling simulations, implemented REST API messaging, reduced data prep time from 6 hours to 5 minutes with a SQL-backed synthesizer, set up and networked Virtual Machines for baggage tracking software, and doubled frontend productivity via an AI-assisted GUI workflow.</p>
+        </div>
+
+        <div class="timeline-item reveal">
+          <p class="timeline-meta">2025 – Present</p>
+          <h3>BASc Mechatronics Engineering</h3>
+          <p class="timeline-company">University of Waterloo</p>
+          <p>Candidate for Bachelor of Applied Science in Mechatronics Engineering. Active member of the Waterloo Aerial Robotics Group (WARG) Autonomy sub-team, specialising in computer vision with ROS and OpenCV.</p>
+        </div>
+
+        <div class="timeline-item reveal">
+          <p class="timeline-meta">2022 – 2025</p>
+          <h3>Team Lead — FIRST Robotics</h3>
+          <p class="timeline-company">FIRST Tech Challenge</p>
+          <p>Led a six-person team, designed core robot mechanisms (grappling hook, angled slide, claw), and wrote Java autonomous navigation code that increased the team's average autonomous phase score by 20 points per match. Won the "Think" and "Innovate" awards and a $15,000 FIRST Tech Scholarship.</p>
+        </div>
+
+        <div class="timeline-item reveal">
+          <p class="timeline-meta">2023 – 2025</p>
+          <h3>Club President — FBLA</h3>
+          <p class="timeline-company">Future Business Leaders of America</p>
+          <p>Led 30 members and raised over $2,500 for student initiatives. Earned 1st-place provincial awards in video game development (×3), marketing, economics, coding &amp; programming, international business, financial math, and business management.</p>
+        </div>
+
+        <div class="timeline-item reveal">
+          <p class="timeline-meta">2021 – 2025</p>
+          <h3>Ontario Secondary School Diploma</h3>
+          <p class="timeline-company">AFNORTH International High School</p>
+          <p>Graduated as Valedictorian with a 98.7% average. Recognised by NATO Base Commander General Guglielmo Luigi Miglietta with the Graf Von Kielmannsegg Award for academic excellence, community contribution, leadership, and character.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards" class="section">
+    <div class="container">
+      <p class="label reveal">Awards &amp; Recognition</p>
+      <div class="awards-grid reveal">
+
+        <div class="award-card">
+          <div class="award-year">2025</div>
+          <h3>Schulich Leaders Scholarship</h3>
+          <p>Selected as school nominee for outstanding leadership and creativity in STEM.</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year">2025</div>
+          <h3>Valedictorian</h3>
+          <p>Honoured for academic excellence (98.7% average) and demonstrated leadership throughout high school.</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year">2025</div>
+          <h3>Graf Von Kielmannsegg Award</h3>
+          <p>Presented by NATO Base Commander General Guglielmo Luigi Miglietta for academic excellence, community contribution, leadership, and character.</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year">2025</div>
+          <h3>FIRST Tech Scholarship — $15,000</h3>
+          <p>Awarded for robotics innovation and team leadership in the FIRST Tech Challenge competition.</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year">2023 – 2025</div>
+          <h3>FBLA Provincial Champion</h3>
+          <p>Multiple 1st-place awards across video game development (×3), marketing, economics, coding &amp; programming, international business, financial math, and business management.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact-center">
+      <p class="label reveal">Get In Touch</p>
+      <p class="reveal contact-sub">
+        I'm open to co-op placements, engineering roles, and interesting collaborations — let's build something.
+      </p>
+      <a href="mailto:c4dietri@uwaterloo.ca" class="contact-email reveal">c4dietri@uwaterloo.ca</a>
+      <div class="social-links reveal">
+        <a href="https://www.linkedin.com/in/chris-dietrich-951539382" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/ChrisD790" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© <span id="year"></span> Chris Dietrich</span>
+    <span>Mechatronics Engineering · University of Waterloo</span>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <script src="main.js"></script>
+</body>
+</html>
